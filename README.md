@@ -1,11 +1,11 @@
-About rpaframework-recognition
-==============================
+About rpaframework-recognition-feedstock
+========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rpaframework-recognition-feedstock/blob/main/LICENSE.txt)
 
 Home: https://rpaframework.org/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rpaframework-recognition-feedstock/blob/main/LICENSE.txt)
 
 Summary: Core utilities used by RPA Framework
 
