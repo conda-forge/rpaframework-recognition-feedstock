@@ -1,5 +1,5 @@
 {% set name = "rpaframework-recognition" %}
-{% set version = "5.1.1" %}
+{% set version = "5.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3c3cdcc33049223d9001cd90c009ae6a3be6ed1d0e8fb0039e4585d38e8746e5
+  sha256: a238209c7e3081a221b75646fe75525f3cad7fd3e42cb5dbfd266c7526ea3b4e
 
 build:
   number: 0
