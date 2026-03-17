@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: d56c48a05aa24a675efd157aa26e9833d93a89d63643884f85813ec4d8eef961
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,14 +19,14 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.6,<4.0
+    - python {{ python_min }}
     - numpy 1.14.*
   run:
     - {{ pin_compatible('numpy') }}
     - opencv >=4.4.0,<5.0.0
     - pillow >=8.0.1,<9.0.0
     - pytesseract >=0.3.6,<0.4.0
-    - python >=3.6,<4.0
+    - python >={{ python_min }},<4.0
     - rpaframework-core >=4.0.1,<5.0.0
     - tesseract >=4.1.1,<5.0.0
 
@@ -39,6 +39,7 @@ test:
       # - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://rpaframework.org/
